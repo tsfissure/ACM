@@ -1,3 +1,2 @@
 # ACM
 ACM/ICPC
-d
