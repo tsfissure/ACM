@@ -15,6 +15,16 @@ struct Debuger {
 		return *this;
 	}
 } dbg;
+template<typename T>inline void scaf(T&v) {
+	char ch = getchar();
+	int sgn = 1;
+	for (; '-' != ch && (ch < '0' || ch > '9'); ch = getchar());
+	if ('-' == ch) sgn = -1, v = 0;
+	else v = ch - '0';
+	for (ch = getchar(); ch >= '0' && ch <= '9'; ch = getchar()) v = (v << 1) + (v << 3) + ch - '0';
+	v *= sgn;
+}
+
 
 int main() {
 	double x = 3.3f;
